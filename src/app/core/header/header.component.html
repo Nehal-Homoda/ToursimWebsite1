@@ -1,0 +1,27 @@
+<header class="header">
+    <a class="logo"> Escape </a>
+
+    <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a routerLink="/home" routerLinkActive="active">Home </a> &nbsp;
+        <a routerLink="/city" routerLinkActive="active">City</a>&nbsp;
+        <a routerLink="/agency" routerLinkActive="active">Agency</a>&nbsp;
+        <a routerLink="/aboutUs" routerLinkActive="active">about us</a>&nbsp;
+        <a routerLink="/contactUs" routerLinkActive="active">contact us</a>&nbsp;
+    </nav>
+
+    <div class="icons">
+        <div  (click)="showSearchForm()"  class="pi pi-search"></div>
+        <a class="pi pi-shopping-cart"></a>
+        <a id="menu-btn" class="pi pi-bars"></a>
+    </div>
+</header>
+<div *ngIf="showSearchForms" class="search-form">
+    <div (click)="hideForm()"   id="close-search" class="fa fa-times"></div>
+    <form action="">
+
+        <input (input)="takeUserInput($event)"  type="search" name="" id="search-box" placeholder="search here ">
+        <label (click)="goToTrip()"  for="search-box" class="fa fa-search"></label>
+
+    </form>
+</div>
