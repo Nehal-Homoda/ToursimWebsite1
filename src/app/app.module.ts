@@ -1,5 +1,6 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,11 +14,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { TripModule } from './trip/trip.module';
-
-
-
-
-
+import { RatingModule } from 'primeng/rating';
 
 @NgModule({
   declarations: [
@@ -25,7 +22,7 @@ import { TripModule } from './trip/trip.module';
     HomeComponent,
     AboutUsComponent,
     ContactUsComponent,
-    AgencyComponent
+    AgencyComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,13 +30,12 @@ import { TripModule } from './trip/trip.module';
     AppRoutingModule,
     RouterModule,
     SharedModule,
-    TripModule
-    
-    
-   
+    TripModule,
+    FormsModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}
