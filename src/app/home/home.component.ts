@@ -21,6 +21,7 @@ export class HomeComponent implements AfterViewInit {
     swiperEl.initialize();
 
     const landMarkSwiperEl = document.querySelector('#landmark-swiper') as any;
+
     const landMarkSwiperParams = {
       slidesPerView: 4,
       pagination: {

@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { TripModule } from './trip/trip.module';
 import { RatingModule } from 'primeng/rating';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RatingModule } from 'primeng/rating';
     SharedModule,
     TripModule,
     FormsModule,
-    RatingModule
+    RatingModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

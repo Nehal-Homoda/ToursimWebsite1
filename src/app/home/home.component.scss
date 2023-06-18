@@ -86,6 +86,11 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 .swiper-slide {
   width: 100%;
 }
+.heading {
+  padding-block: 1em;
+  font-size: 2rem;
+  text-align: center;
+}
 
 // .heading{
 
@@ -129,6 +134,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 //     }
 // }
 .landmark {
+  padding-top: 0;
   .slide {
     width: 35rem;
     height: 30rem;
@@ -156,4 +162,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   .stars i {
     font-size: 1.7rem;
   }
+}
+:host ::ng-deep .p-button {
+  font-size: 2rem;
 }
