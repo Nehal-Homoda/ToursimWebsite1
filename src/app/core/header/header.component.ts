@@ -1,38 +1,59 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import {ButtonModule} from 'primeng/button';
 
-
+interface Option {
+  name: string;
+  code: string;
+}
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  showSearchForms:boolean=false;
-  searchText:string="";
-  constructor(private router:Router){
-    
+export class HeaderComponent implements OnInit {
+  showSearchForms: boolean = false;
+  searchText: string = '';
+  options: Option[] = [];
+  selectedType: Option = { name: '', code: '' };
+  isAuthenticated: boolean = false;
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.isAuthenticated = false;
+    this.options = [
+      { name: 'choose a search criteria', code: '' },
+      { name: 'agency', code: 'agency' },
+      { name: 'city', code: 'city' },
+    ];
   }
-  showMenu(){
-    
+
+  showMenu() {}
+  showSearchForm() {
+    this.showSearchForms = true;
+    this.selectedType.code = '';
   }
-  showSearchForm(){
-    this.showSearchForms=true;
+  takeUserInput(e: any) {
+    this.searchText = e.target.value;
   }
-  takeUserInput(e:any){
-    this.searchText=e.target.value;
+  sendSearchReq() {
+    console.log(this.searchText);
   }
-  sendSearchReq(){
-   console.log(this.searchText);
+  hideForm() {
+    this.showSearchForms = false;
   }
-  hideForm(){
-    this.showSearchForms=false;
+  goToAgency() {
+    this.router.navigateByUrl(`/agency?searchText=${this.searchText}`);
+    this.showSearchForms = false;
   }
-  goToTrip(){
-    this.router.navigateByUrl(`/trip?searchText=${this.searchText}`);
-    this.showSearchForms=false;
+
+  goToCity() {
+    this.router.navigateByUrl(`/city?searchText=${this.searchText}`);
+    this.showSearchForms = false;
+  }
+
+  logout() {
+    console.log('logout');
   }
 }
-
