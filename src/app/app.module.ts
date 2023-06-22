@@ -14,6 +14,9 @@ import { TripModule } from './trip/trip.module';
 import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { AgencyModule } from './agency/agency.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccessModule } from './access/access.module';
+import { PlacesModule } from './places/places.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,10 @@ import { AgencyModule } from './agency/agency.module';
     RatingModule,
     ButtonModule,
     AgencyModule,
+    AccessModule,
+    PlacesModule,
+
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
