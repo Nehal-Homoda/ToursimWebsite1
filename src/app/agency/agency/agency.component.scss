@@ -1,0 +1,13 @@
+p-card{
+    margin-bottom: 4em;
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 10em;
+   background-image:url("/assets/agency.jpg");
+   background-size: cover;
+    width: 100%  !important;
+    max-width: 100% !important;
+}
