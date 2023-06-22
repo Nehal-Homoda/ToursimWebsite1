@@ -7,6 +7,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CityComponent } from './city/city/city.component';
 import { AgencyComponent } from './agency/agency/agency.component';
 import { TripsComponent } from './trip/trips/trips.component';
+import { AgencyDetailsComponent } from './agency/agency-details/agency-details.component';
 
 const routes:Routes=[
   {path:'home',component:HomeComponent},
@@ -17,6 +18,7 @@ const routes:Routes=[
   {path:'city',component:CityComponent},
   {path:'agency',component:AgencyComponent},
   {path:'trip',component:TripsComponent},
+  {path:'agency/details',component:AgencyDetailsComponent}
   
 ]
 @NgModule({
