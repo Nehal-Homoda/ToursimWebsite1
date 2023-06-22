@@ -4,6 +4,7 @@
   <nav class="navbar">
     <div id="nav-close" class="fas fa-times"></div>
     <a routerLink="/home" routerLinkActive="active">Home </a> &nbsp;
+    <a routerLink="/trip" routerLinkActive="active">Trips </a> &nbsp;
     <a routerLink="/city" routerLinkActive="active">City</a>&nbsp;
     <a routerLink="/agency" routerLinkActive="active">Agency</a>&nbsp;
     <a routerLink="/aboutUs" routerLinkActive="active">about us</a>&nbsp;
@@ -24,7 +25,7 @@
         <a
           *ngIf="!isAuthenticated"
           class="dropdown-item"
-          routerLink="/auth/login"
+          routerLink="/signIn"
         >
           Login
         </a>
@@ -33,7 +34,7 @@
         <a
           *ngIf="!isAuthenticated"
           class="dropdown-item"
-          routerLink="/auth/register"
+          routerLink="/signup"
         >
           Register
         </a>

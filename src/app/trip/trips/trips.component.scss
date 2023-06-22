@@ -1,8 +1,19 @@
-.container{
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: black;
+  gap: 20px;
+  padding-top: 10em;
 }
-p-card{
-    margin-bottom: 4em;
+p-card {
+  margin-bottom: 4em;
+}
+p {
+  font-size: 1.25rem;
+}
+
+p-button {
+  display: block;
+  text-align: center;
 }
